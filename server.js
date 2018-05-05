@@ -15,7 +15,7 @@ app.use((req, res, next) => {
         if (err) {
             console.log(err);
         }
-    })
+    });
     next();
 });
 
@@ -38,6 +38,12 @@ app.get('/about', (req, res) => {
         res.render('about.hbs', {
             title: 'About Page'
         });
+});
+
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        title: 'Projects Page'
+    });
 });
 
 app.get('/bad', (req, res) => {
